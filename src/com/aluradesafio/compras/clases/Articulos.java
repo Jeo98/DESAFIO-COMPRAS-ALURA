@@ -1,12 +1,17 @@
 package com.aluradesafio.compras.clases;
 
-public class Articulo {
+import java.util.ArrayList;
+
+public class Articulos {
+
 
     private String nombreArticulo;
     private double precioArticulo;
     private String descripcionArticulo;
 
-    public Articulo(String nombre, double Precio, String descripcion){
+
+
+    public Articulos(String nombre, double Precio, String descripcion){
 
         this.nombreArticulo=nombre;
         this.precioArticulo=Precio;
@@ -36,6 +41,6 @@ public class Articulo {
 
     @Override
     public String toString() {
-        return "Articulo: \n" + this.nombreArticulo + "Descripcion: \n"+this.descripcionArticulo + "Precio:$ "+this.precioArticulo;
+        return "Articulo: \n" + this.nombreArticulo + "Precio:$ "+this.precioArticulo;
     }
 }

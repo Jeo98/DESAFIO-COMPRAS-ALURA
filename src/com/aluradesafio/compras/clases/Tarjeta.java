@@ -1,28 +1,36 @@
 package com.aluradesafio.compras.clases;
 
+import java.util.List;
+
 public class Tarjeta {
 
-    private String tipoDetarjeta; //Credito o debito
+    private List<Articulos> ListadoDeArticulos; //lista donde cargo objetos tipo Articulos
     private double limite=0;
     private double saldo=0;
 
     public Tarjeta(){
 
     }
-    public Tarjeta(String tipotarjeta, Double saldoinicial){//Constructor
+    public Tarjeta(double limite, double saldoinicial){//Constructor
 
-        this.tipoDetarjeta=tipotarjeta;
-        this.limite=saldoinicial;
+        this.limite=limite;
+        this.saldo=saldoinicial;
 
-    }
-
-    public String getTipoDetarjeta() {
-        return tipoDetarjeta;
     }
 
     public double getSaldo() {
         return limite;
     }
 
+    public boolean verificarCompra(Articulos Articulo){
+
+        if(this.saldo >= Articulo.getPrecioArticulo()) {
+            this.saldo -= Articulo.getPrecioArticulo();
+            ListadoDeArticulos.add(Articulo); //agrego articulo comprado a la lista
+            return true;
+        }
+        else
+            return false;//
+    }
 
 }
