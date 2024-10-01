@@ -64,11 +64,13 @@ public class Main {
                     switch (submenu){
 
                         case 1: while(submenu != )
+                            //completar aca para generalizar la Lista de articulos y no uno por uno
                                 if(TarjetaUsuario.verificarCompra(ListaArticulos.get(0))){
                                 System.out.println("ARTICULO AGREGADO!");
-                                TarjetaUsuario.
+
 
                         }
+                        break;
 
 
 
